@@ -169,7 +169,7 @@ void printCredits() {
     printf("\n\tDeveloped by:");
     printf("\n\t- ALI ABDERRAOUF");
     printf("\n\t- DADDA YACINE");
-    printf("\n\t- Abdellah Hebbache");
+    printf("\n\t- ABDELLAH HEBBACHE");
     printf("\n\n\tPress any key to go back: ");
     char dummy[255];
     scanf("%s", dummy);
