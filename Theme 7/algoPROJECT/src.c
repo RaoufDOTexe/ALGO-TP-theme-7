@@ -13,27 +13,27 @@ struct Contact {
     char email[255];
 };
 
-struct Contact contacts[no_of_contacts];
+struct Contact contacts[no_of_contacts];//matrice nstockiw fiha les contacts
 
-void printHeader(char* str);
-int printMenu();
-void promptContact(char* qn, char* str);
-int addNewContact(int lastId);
+void printHeader(char* str);//decor fo9ani belkhtot
+int printMenu();//باجة تع الصفحة الرئيسية et obtenez la sélection de l'utilisateur
+void promptContact(char* qn, char* str);//demande m utilisateur ydkhel les informations 
+int addNewContact(int lastId);//nzidou contact llmatrice li drnaha
 int printContacts();
-void printCredits();
+void printCredits();// creditd tekhrojlek fel menu te3 les developpeurs
 
-int main() {
+int main() {//Ces variables sont des chaînes qui contiennent des adresses qui seront utilisées à différents endroits du programme.
     char title_1[] = "Menu";
     char title_2[] = "New Contact Form";
     char title_3[] = "All Contacts";
 
     int lastId = 0;
-    int choice = 0;
+    int choice = 0;// variable te3 user choice
 
     system("color A");
 
-MENU:
-    system("cls");
+MENU:// naffichiw l menu w neste9blo les donnes te3 lutilisateur
+    system("cls");// fonction special llwindows brk trje3 page fargha
     choice = printMenu();
     switch(choice) {
         case 1:
@@ -75,13 +75,13 @@ EXIT:
     return 0;
 }
 
-void printHeader(char* str) {
-    int strlength = strlen(str);
-    int padding = width - strlength;
+void printHeader(char* str) {//Il prend du texte comme titre et l'imprime avec des lignes des deux côtés pour le rendre plus organisé dans la sortie.
+    int strlength = strlen(str);//     Calcule la longueur du texte (titre)
+    int padding = width - strlength;   // lespae li bin text w lkhtot te3 decor
     int leftLimit = floor(padding / 2);
     int rightLimit = width - leftLimit;
     int i = 0, j = 0;
-    printf("\n\t");
+    printf("\n\t");// print the line te3 dicor
     do {
         if(i >= leftLimit && i < rightLimit) {
             printf("%c", str[j]);
@@ -94,7 +94,7 @@ void printHeader(char* str) {
     printf("\n");
 }
 
-int printMenu() {
+int printMenu() {//fonction te3 menu w demander m lutilisateur ydkhel mn 1 l 4
     int choice = 0;
     char header[] = "Menu";
     char footer[] = "----";
@@ -110,11 +110,11 @@ int printMenu() {
     return choice;
 }
 
-void promptContact(char* qn, char* str) {
+void promptContact(char* qn, char* str) {// fonction te3 window te3 contact 
     printf("\n\tEnter %s:\n\t> ", qn);
     scanf("%s", str);
 }
-
+//Ajoute un nouveau contact au tableau de contacts en utilisant lastId comme pointeur.Le lastId est mis à jour après chaque ajout de nouveau contact.
 int addNewContact(int lastId) {
     struct Contact newContact;
     char header[] = "Contact Entry Form";
@@ -131,7 +131,7 @@ int addNewContact(int lastId) {
     return lastId;
 }
 
-int printContacts() {
+int printContacts() {// page te3 les contacts
     char header[] = "All Contacts";
     int i = 0;
     char ans[255];
@@ -163,7 +163,7 @@ int printContacts() {
     }
 }
 
-void printCredits() {
+void printCredits() {// page te3 devloppeurs
     char header[] = "Credits";
     printHeader(header);
     printf("\n\tDeveloped by:");
