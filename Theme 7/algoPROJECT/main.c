@@ -231,7 +231,7 @@ void printCredits() {// page te3 devloppeurs
     char header[] = "Credits";
     printHeader(header);
     printf("\n\tDeveloped by:");
-    printf("\n\t- ALI ABDERRAOUF");
+    printf("\n\t- ALI MOHAMMED AMINE ABDERRAOUF");
     printf("\n\t- DADDA YACINE");
     printf("\n\t- ABDELLAH HEBBACHE");
     printf("\n\t- BEN SAID HOUCINE");
