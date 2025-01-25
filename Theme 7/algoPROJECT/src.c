@@ -31,6 +31,7 @@ int main() {
     int choice = 0;
 
     system("color A");
+    
 
 MENU:
     system("cls");
